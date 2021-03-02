@@ -1,0 +1,40 @@
+class Person(){
+var $firstName;
+var $lastName;
+
+protected $firstName;
+protected $lastName;
+
+//constructor
+function __construct($firstName, $lastName){
+    this-> fistName = $firstName;
+    this-> lastName = $lastName;
+}
+
+function fullName(){
+    return $this->firstname . ' ' .this->lastName;
+}
+function getFirstName(){
+    return $this->firstName;
+}
+function setFirstName($firstName){
+    $this -> firstName = $firstName;
+}
+}
+
+$persona1 = new Person();
+
+/*
+$persona1 ->firstName = 'laura';
+$persona1 ->lastName = 'castillo';
+*/
+
+$persona2 = new Person('alicia', 'montemayor');
+
+echo "{$persona1->fullName()}";
+
+/*tipo de clases:
+public, protected , private:
+Public: visible en cualquier sitio.
+protected-private :solo la clase que la declara.
+*/
